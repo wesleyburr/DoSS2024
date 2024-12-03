@@ -417,7 +417,7 @@ Wesley S. Burr, P.Stat.
 </section>
 <section id="growing-evidence" class="slide level2">
 <h2>Growing Evidence</h2>
-<p>The past two are extreme examples. Weight of evidence grew across the 20th century, including through the increased research into the long-term impacts of tobacco smoking.</p>
+<p>The past two are extreme examples. Weight of evidence grew across the 20th century, including through increased research into the long-term impacts of tobacco smoking.</p>
 <p><br></p>
 <blockquote>
 <p>Acute exposure to very, very high levels of air pollution is bad. Chronic exposure to high levels of air pollution is bad.</p>
@@ -438,27 +438,147 @@ Wesley S. Burr, P.Stat.
 <section id="questions-to-answer" class="slide level2">
 <h2>Questions to Answer</h2>
 <ul>
+<li>what, exactly, do we mean by “acute”?</li>
 <li>what is the unit of study?</li>
 <li>what is the dose, and how is it measured?</li>
 <li>… can we do this outside of controlled (chamber) studies?</li>
 </ul>
+<blockquote>
+<p>These lead us to ecological studies: it’s just too expensive to do anything else.</p>
+</blockquote>
+<ul>
+<li>population level “health” metric</li>
+<li>population level “exposure” metric</li>
+<li>whack them in a model, hope you’re measuring something meaningful and matching your definition of “acute”</li>
+</ul>
 </section>
-<section class="slide level2">
+<section id="first-major-unified-result" class="slide level2">
+<h2>First Major Unified Result</h2>
+<p>There was a <strong>lot</strong> of research done by really good statisticians in the 1980s and 1990s on these questions. The first unified result that set a standard for the field came out of Francesca Dominici’s postdoctoral work at Hopkins from 1998-2000:</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figure/combining_evidence.png" width="500"></p>
+<figcaption>Dominici, Samet &amp; Zeger, 2000, JRSS-A</figcaption>
+</figure>
+</div>
+</center>
+</section>
+<section id="what-did-this-paper-provide" class="slide level2">
+<h2>What Did This Paper Provide?</h2>
+<ul>
+<li>population-level average exposures using a network of ground-source monitors</li>
+<li>population-level counts of health outcomes (e.g., deaths due to ICD-10 J-causes - pulmonary)</li>
+<li>the use of GAMs to measure association</li>
+<li>the use of Bayesian partial pooling to produce regional and national estimates</li>
+<li>some time series influences - especially the use of filters</li>
+</ul>
+</section>
+<section id="lets-start-here" class="slide level2">
+<h2>Let’s Start Here</h2>
+<p>This is the launching-off point where I largely got involved in this field.</p>
+<p>There <strong>were</strong> another half dozen fundamental papers between 2000 and 2010, mostly concerned with expanding this framework, and fine-tuning the model to prevent multicollinearity<sup>1</sup>, but this is the framework I started working with in graduate school.</p>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Shout out to Tim Ramsay’s 2003 <a href="https://journals.lww.com/epidem/fulltext/2003/01000/the_effect_of_concurvity_in_generalized_additive.9.aspx">paper</a> which firmed things up nicely.</p></li></ol></aside></section>
+<section>
+<section id="filters" class="title-slide slide level1 center">
+<h1>Filters</h1>
 
-<p>layout: false class: inverse, middle</p>
+</section>
+<section id="what-is-a-filter-exactly" class="slide level2">
+<h2>What is a Filter, Exactly?</h2>
+<p>One of the questions I first considered was this idea (from Dominici, Samet, Zeger, Peng, etc.) that including cubic regression splines in a GAM could be considered a <strong>filter</strong>.</p>
+<ul>
+<li>I thought I knew what a filter is (from the spectrum estimation point of view)</li>
+<li>This is an odd definition of a filter</li>
+<li>So what is it doing?</li>
+</ul>
+</section>
+<section id="spectral-view" class="slide level2">
+<h2>Spectral View</h2>
+
+<img data-src="figure/bias_spectra.png" width="700" class="r-stretch"></section>
+<section id="turns-out" class="slide level2">
+<h2>Turns Out</h2>
+<p>If you think of these fixed basis splines as a filter, they <strong>are</strong> … but a very poor one!</p>
+<blockquote>
+<p>We can do better.</p>
+</blockquote>
+<p>Apply the last 30 years of spectrum estimation theory, use optimal basis functions (prolate spheroidal sequences), sprinkle in a smidge of multitaper spectrum estimation inspiration and …</p>
+</section>
+<section id="paper" class="slide level2">
+<h2>Paper</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figure/environmetrics_paper.png" width="700"></p>
+<figcaption>Burr, Takahara &amp; Shin, 2015, Environmetrics</figcaption>
+</figure>
+</div>
+</center>
+</section></section>
+<section>
+<section id="natural-experiments" class="title-slide slide level1 center">
+<h1>Natural Experiments</h1>
+
+</section>
+<section id="take-the-framework-apply-it-to-one-off-events" class="slide level2">
+<h2>Take the Framework, Apply it to One-Off Events</h2>
+<p>You know the saying: once you have a hammer, everything looks like a nail.</p>
+<p>Can we take this framework and way of thinking about air pollution exposure, and expand it further by considering it as a tool for exploring natural experiments?</p>
+<p>(rhetorical question)</p>
+</section>
+<section id="oil-refineries" class="slide level2">
+<h2>Oil Refineries</h2>
+<ul>
+<li>Oil refineries are known as fairly stinky sites.</li>
+<li>While controlled, there’s a <strong>lot</strong> of particulate matter and volatile organics that are emitted in the process of cracking oil to make gasoline and byproducts</li>
+<li>If we use the earlier framework, can we look at the “before” and “after” of a plant closure - as a natural experiment, what effects are observable?</li>
+</ul>
+</section>
+<section id="oakville" class="slide level2">
+<h2>Oakville</h2>
+<ul>
+<li>in</li>
+</ul>
+</section>
+<section id="paper-1" class="slide level2">
+<h2>Paper</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figure/ijerph_paper.png" width="550"></p>
+<figcaption>Burr et al., 2018, IJERPH</figcaption>
+</figure>
+</div>
+</center>
+</section></section>
+<section id="what-do-you-do-with-lag" class="title-slide slide level1 center">
+<h1>What Do You Do With Lag?</h1>
+
+</section>
+
+<section>
+<section id="transfer-function-models" class="title-slide slide level1 center">
+<h1>Transfer Function Models</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2><span class="math inline">\(\;\)</span></h2>
+<h3 id="thank-you-to-meredith-piotr-for-inviting-me-today.">Thank you to Meredith &amp; Piotr for inviting me today.</h3>
+<p><br></p>
 <center>
 <a href="http://www.trentu.ca/math/"><img src="figure/trent.png" style="width: 200px;"></a>    <a href="https://creativecommons.org/licenses/by/4.0/"><img src="figure/cc.png" style="width: 200px;"></a>
 </center>
 <ul>
 <li>Contact me: <a href="mailto:wesleyburr@trentu.ca">Email</a></li>
-<li>Slides created via the R package <a href="https://github.com/yihui/xaringan">xaringan</a> by Yihui Xie</li>
-<li>Slides available at <a href="https://wesleyburr.github.io/DoSS2024/#1">GitHub</a> <br></li>
+<li>Slides available on <a href="https://wesleyburr.github.io/DoSS2024/#1">GitHub</a> <br></li>
 </ul>
 <p><img src="TUPMS.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
+
     </div>
   </div>
 
