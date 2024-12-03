@@ -63,20 +63,89 @@ would impact human health at all?
 
 ## Coal Miners
 
+:::: {.columns}
+
+::: {.column width="40%"}
 * Black Lung Disease
 * long-term exposure to coal dust
 * similar to silicosis and asbestosis
+* tens of thousands of deaths, but very delayed
+* **chronic exposure**
+:::
+
+::: {.column width="60%"}
+![](figure/black_lung.jpg)
+
+[Source: jstor](https://daily.jstor.org/the-militant-miners-who-exposed-the-horrors-of-black-lung/)
+:::
+
+::::
 
 ---
 
 ## Great Smog of London (1952)
 
+:::: {.columns}
 
+::: {.column width="40%"}
+* temperature inversion: high-pressure system and cold weather
+* trapped all of the heavy pollution from coal burning and diesel vehicles
+* incredibly thick smog
+* thousands of deaths
+* **acute exposure**
+:::
 
+::: {.column width="60%"}
+![](figure/great_smog.jpg)
 
+[Source: The Environmental Industries Commission](https://eic-uk.co.uk/news/blog/learning-the-lessons-from-london-s-great-smog/)
+:::
 
+::::
 
+---
 
+## Growing Evidence
+
+The past two are extreme examples. Weight of evidence grew across the 20th
+century, including through the increased research into the long-term impacts
+of tobacco smoking. 
+
+<br>
+
+> Acute exposure to very, very high levels of air pollution is bad. 
+> Chronic exposure to high levels of air pollution is bad. 
+
+<br>
+
+**Toxicology-Style Question**: what is the safe dose?
+
+---
+
+## A Question of Measurement
+
+We're statisticians. 
+
+<br>
+
+Our first instinct when faced with a problem is to **gather data**.
+
+<br>
+
+(or design a study ... to gather data).
+
+<br>
+
+What data makes sense to try to measure the dose-response of exposure to 
+air pollution?
+
+---
+
+## Questions to Answer
+
+* what is the unit of study?
+* what is the dose, and how is it measured?
+* ... can we do this outside of controlled (chamber) studies?
 
 ---
 
