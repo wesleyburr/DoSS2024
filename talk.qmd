@@ -1,0 +1,95 @@
+---
+title: "Some Statistical Problems Inspired by Air Pollution"
+subtitle: "for the Department of Statistical Sciences, University of Toronto"
+author: "Wesley S. Burr, P.Stat."
+institute: "Associate Professor & Chair <br> Department of Mathematics & Statistics <br> Trent University"
+format:
+  revealjs:
+    theme: default
+    margin: 0.05
+    incremental: false
+    logo: TUPMS.png
+    css: style.css
+    pdf-separate-fragments: false
+slide-number: true
+smaller: false
+---
+
+## Thank you for having me
+
+<script type="text/x-mathjax-config"> 
+    MathJax.Hub.Config({ 
+        "HTML-CSS": { scale: 85, linebreaks: { automatic: true } }, 
+        SVG: { linebreaks: { automatic:true } }, 
+        displayAlign: "center" });
+</script>
+
+* Who am I?
+* Air Pollution: the Case for Human Impact
+* Interesting Problems 
+
+## Who Am I?
+
+* PhD from Queen's University in statistics, under David J. Thomson
+* most definitely an applied statistician
+* joined Trent University in 2016, became Chair of Math & Stats in 2022
+* do a lot of random things that are all connected through the lens of "interesting data",
+with a theme of time series
+
+## Air Pollution?
+
+As I mentioned in the abstract for the talk, today I'd like
+to talk about a series of connected problems in applied statistics,
+all stemming from the question:
+
+<br>
+
+> Given broad population-level measurements of air pollution and climate,
+> and aggregate population-level health counts, what can we estimate
+> about the acute impacts of air pollution exposure on human health?
+
+---
+
+## Air Pollution Exposure
+
+First, a little history lesson. Why do we think air pollution 
+would impact human health at all? 
+
+<br>
+
+> This may seem obvious, but obvious things are tricky!
+
+---
+
+## Coal Miners
+
+* Black Lung Disease
+* long-term exposure to coal dust
+* similar to silicosis and asbestosis
+
+---
+
+## Great Smog of London (1952)
+
+
+
+
+
+
+
+
+---
+
+layout: false
+class: inverse, middle
+
+<center>
+<a href="http://www.trentu.ca/math/"><img src="figure/trent.png" style="width: 200px;"/></a> &emsp;&emsp;
+<a href="https://creativecommons.org/licenses/by/4.0/"><img src="figure/cc.png" style="width: 200px;"/></a>
+</center>
+
+- Contact me: [Email](mailto:wesleyburr@trentu.ca)
+- Slides created via the R package [xaringan](https://github.com/yihui/xaringan) by Yihui Xie
+- Slides available at [GitHub](https://wesleyburr.github.io/DoSS2024/#1)
+<br/>
+
