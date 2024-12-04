@@ -183,13 +183,9 @@ that including cubic regression splines in a GAM could be considered a **filter*
 * This is an odd definition of a filter
 * So what is it doing?
 
-## Spectral View
+## Turns Out ...
 
-![](figure/bias_spectra.png){width=700}
-
-## Turns Out
-
-If you think of these fixed basis splines as a filter, they **are** ... but
+... if you think of these fixed basis splines as a filter, they **are** ... but
 a very poor one!
 
 > We can do better. 
@@ -197,6 +193,11 @@ a very poor one!
 Apply the last 30 years of spectrum estimation theory, use optimal basis functions
 (prolate spheroidal sequences), sprinkle in a smidge of multitaper spectrum 
 estimation inspiration and ...
+
+## Spectral View
+
+![](figure/bias_spectra.png){width=700}
+
 
 ## Paper
 
@@ -229,7 +230,7 @@ plant closure - as a natural experiment, what effects are observable?
 
 <center>
 
-![Burr et al., 2018, IJERPH](figure/ijerph_paper.png){width=550}
+![Burr et al., 2018, IJERPH](figure/ijerph_paper.png){width=650}
 
 </center>
 
@@ -316,7 +317,7 @@ These functions **transfer** power from one to the other, so ... **transfer func
 This is a currently open research project with Glen Takahara (Queen's),
 David Riegert (Trent & Queen's), and Hwashin H. Shin (Health Canada).
 
-* the estimation of the transfer functions has been solved.
+* the estimation of the transfer functions has been solved - robustly, at that!
 * the interpretation is proving ... difficult^[We can come up with lots of options for measurements. So far, none of them are directly comparable to the past methods. This is annoying.]
 
 # Honourable Mention
@@ -329,7 +330,28 @@ Project led by Marta Blangiardo and Monica Pirani.
 
 ![Martínez-Hernández et al., 2024](figure/source_app2.png){width=450}
 
-## $\;$
+# Conclusions
+
+## Applied Problems can be Fun
+
+* I enjoy applied problems. 
+* I enjoy developing methods and algorithms for
+practitioners. 
+* This question of air pollution and health that I first
+considered in 2010 has proved to be a rich vein to mine, over and over,
+with some pretty fun methodologies and algorithms along the way
+
+## Open Problems
+
+* personalized exposure
+* better (spatiotemporal) modeling of exposure at a population level^[Patrick Brown and Marta Blangiardo have both independently led some really interesting work connected to this.]
+* change your source measurements: data fusion
+* the question of pooling and aggregation of risk
+* extreme events as "acute"
+* can we use machine learning models in an effective way to do any of this?
+* multiple pollutants^[The Holy Grail. Really, really hard.] simultaneously
+
+## Any Thoughts?
 
 <center>
 Thank you to Meredith & Piotr for inviting me today, and for your hospitality!
