@@ -359,10 +359,9 @@ Wesley S. Burr, P.Stat.
 <section id="who-am-i" class="slide level2">
 <h2>Who Am I?</h2>
 <ul>
-<li>PhD from Queen’s University in statistics, under David J. Thomson</li>
-<li>most definitely an applied statistician</li>
+<li>PhD from Queen’s University in statistics (2012), under David J. Thomson</li>
 <li>joined Trent University in 2016, became Chair of Math &amp; Stats in 2022</li>
-<li>do a lot of random things that are all connected through the lens of “interesting data”, with a theme of time series</li>
+<li>do a lot of random things that are all connected through the lens of “interesting data”, with a theme of time series and statistical signal processing</li>
 </ul>
 </section>
 <section id="air-pollution" class="slide level2">
@@ -458,7 +457,7 @@ Wesley S. Burr, P.Stat.
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="figure/combining_evidence.png" width="500"></p>
+<p><img data-src="figure/combining_evidence.png" width="600"></p>
 <figcaption>Dominici, Samet &amp; Zeger, 2000, JRSS-A</figcaption>
 </figure>
 </div>
@@ -471,7 +470,7 @@ Wesley S. Burr, P.Stat.
 <li>population-level counts of health outcomes (e.g., deaths due to ICD-10 J-causes - pulmonary)</li>
 <li>the use of GAMs to measure association</li>
 <li>the use of Bayesian partial pooling to produce regional and national estimates</li>
-<li>some time series influences - especially the use of filters</li>
+<li>some time series influences - especially suggestion that what was being done fit under the definition of filters</li>
 </ul>
 </section>
 <section id="lets-start-here" class="slide level2">
@@ -510,7 +509,7 @@ Wesley S. Burr, P.Stat.
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="figure/environmetrics_paper.png" width="700"></p>
+<p><img data-src="figure/environmetrics_paper.png" width="800"></p>
 <figcaption>Burr, Takahara &amp; Shin, 2015, Environmetrics</figcaption>
 </figure>
 </div>
@@ -535,12 +534,6 @@ Wesley S. Burr, P.Stat.
 <li>If we use the earlier framework, can we look at the “before” and “after” of a plant closure - as a natural experiment, what effects are observable?</li>
 </ul>
 </section>
-<section id="oakville" class="slide level2">
-<h2>Oakville</h2>
-<ul>
-<li>in</li>
-</ul>
-</section>
 <section id="paper-1" class="slide level2">
 <h2>Paper</h2>
 <center>
@@ -552,15 +545,95 @@ Wesley S. Burr, P.Stat.
 </div>
 </center>
 </section></section>
-<section id="what-do-you-do-with-lag" class="title-slide slide level1 center">
-<h1>What Do You Do With Lag?</h1>
+<section>
+<section id="whats-with-lag" class="title-slide slide level1 center">
+<h1>What’s With Lag?</h1>
 
 </section>
-
+<section id="the-question-of-lag" class="slide level2">
+<h2>The Question of Lag</h2>
+<p>When building models in this framework, one of the most common things to do is to <em>lag</em> the predictors. Why?</p>
+<ul>
+<li>justified via biological mechanism delay</li>
+<li>gives higher associations</li>
+</ul>
+<p>However … it feels very <em>ad hoc</em>.</p>
+</section>
+<section id="phase-as-lag" class="slide level2">
+<h2>Phase As Lag</h2>
+<p>Coming at this problem from a time series point of view<sup>1</sup>, lagging the predictors is somehow trying to align the stuctured of the model with the autocovariance inherent in the data.</p>
+<ul>
+<li>but the filters are supposed to be removing the long timescale structure</li>
+<li>supposedly the autocorrelation function is near zero<sup>2</sup></li>
+<li>what exactly is driving the association?</li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>As compared to a more structural point of view, e.g., Gasparrini, Armstrong &amp; Kenward, 2010.</p></li><li id="fn3"><p>It’s not really.</p></li></ol></aside></section>
+<section id="one-of-my-favourite-plots" class="slide level2">
+<h2>One of My Favourite Plots</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figure/phase_as_lag.png" width="1000"></p>
+<figcaption>From <em>Synthetically lagged models</em>, Burr, Shin &amp; Takahara, 2019.</figcaption>
+</figure>
+</div>
+</center>
+</section>
+<section id="paper-2" class="slide level2">
+<h2>Paper</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figure/spl.png" width="850"></p>
+<figcaption>Burr et al., 2019, Statistics &amp; Probability Letters</figcaption>
+</figure>
+</div>
+</center>
+</section></section>
 <section>
 <section id="transfer-function-models" class="title-slide slide level1 center">
 <h1>Transfer Function Models</h1>
 
+</section>
+<section id="rewriting-the-book" class="slide level2">
+<h2>Rewriting the Book</h2>
+<p>Everything mentioned so far fits into the framework regularized by Dominici et al.&nbsp;between 1998 and 2006. Why?</p>
+<ul>
+<li>it’s what the field uses, and change is hard</li>
+<li>it works<sup>1</sup></li>
+</ul>
+<p>But can we do better if we rethink the entire modeling paradigm?</p>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>To some extent … </p></li></ol></aside></section>
+<section id="what-is-the-question-again" class="slide level2">
+<h2>What is the question again?</h2>
+<p>Given a restriction of ecological data<sup>1</sup>, what do we have?</p>
+<ul>
+<li>daily counts of some health outcome<sup>2</sup></li>
+<li>corresponding daily exposure proxies</li>
+<li>corresponding daily covariates</li>
+</ul>
+<p>And the question?</p>
+<blockquote>
+<p>Given broad population-level measurements of air pollution and climate, and aggregate population-level health counts, what can we estimate about the acute impacts of air pollution exposure on human health?</p>
+</blockquote>
+<aside><ol class="aside-footnotes"><li id="fn5"><p>Personalized exposures would be lovely, but are just not feasible … yet. Some work is being done on this.</p></li><li id="fn6"><p>Daily, otherwise we just don’t have enough data to be measured.</p></li></ol></aside></section>
+<section id="transfer-function-models-1" class="slide level2">
+<h2>Transfer Function Models</h2>
+<p>As you might have gathered from these examples, I often look at problems through the lens of a frequency-domain representation. So:</p>
+<ul>
+<li>an <em>association</em> is a measurement of relationship between two time series: a predictor<sup>1</sup> and a response.</li>
+<li>why should that association be linear?</li>
+<li>obviously the lags matter</li>
+</ul>
+<p>In the applied fields of oceanography, magnetotellurics, and helioseismology, spectra are often used and the <strong>map</strong> between them is the objective function. These functions <strong>transfer</strong> power from one to the other, so … <strong>transfer function models</strong>.</p>
+<aside><ol class="aside-footnotes"><li id="fn7"><p>The problem of two or more pollutants is a thorny one, and a completely open problem.</p></li></ol></aside></section>
+<section id="current-research" class="slide level2">
+<h2>Current Research</h2>
+<p>This is a currently open research project with Glen Takahara (Queen’s), David Riegert (Trent &amp; Queen’s), and Hwashin H. Shin (Health Canada).</p>
+<ul>
+<li>the estimation of the transfer functions has been solved.</li>
+<li>the interpretation is proving … difficult</li>
+</ul>
 </section>
 <section id="section" class="slide level2">
 <h2><span class="math inline">\(\;\)</span></h2>

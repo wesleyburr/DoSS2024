@@ -30,11 +30,10 @@ smaller: false
 
 ## Who Am I?
 
-* PhD from Queen's University in statistics, under David J. Thomson
-* most definitely an applied statistician
+* PhD from Queen's University in statistics (2012), under David J. Thomson
 * joined Trent University in 2016, became Chair of Math & Stats in 2022
 * do a lot of random things that are all connected through the lens of "interesting data",
-with a theme of time series
+with a theme of time series and statistical signal processing
 
 ## Air Pollution?
 
@@ -153,7 +152,7 @@ Hopkins from 1998-2000:
 
 <center>
 
-![Dominici, Samet & Zeger, 2000, JRSS-A](figure/combining_evidence.png){width=500}
+![Dominici, Samet & Zeger, 2000, JRSS-A](figure/combining_evidence.png){width=600}
 
 </center>
 
@@ -163,7 +162,7 @@ Hopkins from 1998-2000:
 * population-level counts of health outcomes (e.g., deaths due to ICD-10 J-causes - pulmonary)
 * the use of GAMs to measure association
 * the use of Bayesian partial pooling to produce regional and national estimates
-* some time series influences - especially the use of filters
+* some time series influences - especially suggestion that what was being done fit under the definition of filters
 
 ## Let's Start Here
 
@@ -203,7 +202,7 @@ estimation inspiration and ...
 
 <center>
 
-![Burr, Takahara & Shin, 2015, Environmetrics](figure/environmetrics_paper.png){width=700}
+![Burr, Takahara & Shin, 2015, Environmetrics](figure/environmetrics_paper.png){width=800}
 
 </center>
 
@@ -226,10 +225,6 @@ that are emitted in the process of cracking oil to make gasoline and byproducts
 * If we use the earlier framework, can we look at the "before" and "after" of a 
 plant closure - as a natural experiment, what effects are observable?
 
-## Oakville
-
-* in 
-
 ## Paper
 
 <center>
@@ -238,9 +233,92 @@ plant closure - as a natural experiment, what effects are observable?
 
 </center>
 
-# What Do You Do With Lag?
+# What's With Lag?
+
+## The Question of Lag
+
+When building models in this framework, one of the most common things to do
+is to *lag* the predictors. Why?
+
+* justified via biological mechanism delay
+* gives higher associations
+
+However ... it feels very *ad hoc*.
+
+## Phase As Lag
+
+Coming at this problem from a time series point of view^[As compared to a more structural point of view, e.g., Gasparrini, Armstrong & Kenward, 2010.], 
+lagging the  predictors is somehow trying to align the stuctured of the model with the autocovariance inherent in the data.
+
+* but the filters are supposed to be removing the long timescale structure
+* supposedly the autocorrelation function is near zero^[It's not really.]
+* what exactly is driving the association?
+
+## One of My Favourite Plots
+
+<center>
+
+![From *Synthetically lagged models*, Burr, Shin & Takahara, 2019.](figure/phase_as_lag.png){width=1000}
+
+</center>
+
+## Paper
+
+<center>
+
+![Burr et al., 2019, Statistics & Probability Letters](figure/spl.png){width=850}
+
+</center>
 
 # Transfer Function Models
+
+## Rewriting the Book
+
+Everything mentioned so far fits into the framework regularized by
+Dominici et al. between 1998 and 2006. Why?
+
+* it's what the field uses, and change is hard
+* it works^[To some extent ... ]
+
+But can we do better if we rethink the entire modeling paradigm? 
+
+## What is the question again?
+
+Given a restriction of ecological data^[Personalized exposures would be lovely, but are just not feasible ... yet. Some work is being done on this.], what do we
+have?
+
+* daily counts of some health outcome^[Daily, otherwise we just don't have enough data to be measured.]
+* corresponding daily exposure proxies
+* corresponding daily covariates
+
+And the question?
+
+> Given broad population-level measurements of air pollution and climate,
+> and aggregate population-level health counts, what can we estimate
+> about the acute impacts of air pollution exposure on human health?
+
+## Transfer Function Models
+
+As you might have gathered from these examples, I often look at problems
+through the lens of a frequency-domain representation. So:
+
+* an *association* is a measurement of relationship between
+two time series: a predictor^[The problem of two or more pollutants is a thorny one, and a completely open problem.] and a response.
+* why should that association be linear?
+* obviously the lags matter
+
+In the applied fields of oceanography, magnetotellurics, and helioseismology,
+spectra are often used and the **map** between them is the objective function.
+These functions **transfer** power from one to the other, so ... **transfer function models**.
+
+## Current Research
+
+This is a currently open research project with Glen Takahara (Queen's),
+David Riegert (Trent & Queen's), and Hwashin H. Shin (Health Canada).
+
+* the estimation of the transfer functions has been solved.
+* the interpretation is proving ... difficult
+
 
 
 ## $\;$
