@@ -317,13 +317,23 @@ This is a currently open research project with Glen Takahara (Queen's),
 David Riegert (Trent & Queen's), and Hwashin H. Shin (Health Canada).
 
 * the estimation of the transfer functions has been solved.
-* the interpretation is proving ... difficult
+* the interpretation is proving ... difficult^[We can come up with lots of options for measurements. So far, none of them are directly comparable to the past methods. This is annoying.]
 
+# Honourable Mention
 
+## Source Apportionment
+
+Project led by Marta Blangiardo and Monica Pirani.
+
+![Baerenbold et al., 2023](figure/source_app1.png){width=450}
+
+![Martínez-Hernández et al., 2024](figure/source_app2.png){width=450}
 
 ## $\;$
 
-### Thank you to Meredith & Piotr for inviting me today.  
+<center>
+Thank you to Meredith & Piotr for inviting me today, and for your hospitality!
+</center>
 
 <br>
 
