@@ -325,14 +325,6 @@ David Riegert (Trent & Queen's), and Hwashin H. Shin (Health Canada).
 
 ![Jackknifed Transfer Function Between NO2 and All-Cause Mortality.](figure/jackknifed_tf.png)
 
-## Plot
-
-<center>
-
-![Offset Coherence Between Z and Y for Magnetic Field](figure/offsetCoh.png){width=500}
-
-</center>
-
 # Honourable Mention
 
 ## Source Apportionment
@@ -340,6 +332,8 @@ David Riegert (Trent & Queen's), and Hwashin H. Shin (Health Canada).
 Project led by Marta Blangiardo and Monica Pirani.
 
 ![Baerenbold et al., 2023](figure/source_app1.png){width=450}
+
+## Source Apportionment
 
 ![Martínez-Hernández et al., 2024](figure/source_app2.png){width=450}
 
@@ -356,15 +350,16 @@ with some pretty fun methodologies and algorithms along the way
 
 ## Open Problems
 
-* personalized exposure
-* better (spatiotemporal) modeling of exposure at a population level^[Patrick Brown and Marta Blangiardo have both independently led some really interesting work connected to this.]
-* change your source measurements: data fusion
-* the question of pooling and aggregation of risk
-* extreme events as "acute"
+* more personalized exposure^[Meredith has done some recent work on this.]
+* better (spatiotemporal) modeling of exposure at a population level^[Patrick Brown 
+and Meredith Franklin have both done really interesting work on this!]
+* change your source measurements: data fusion^[Marta Blangiardo's group has done some great work on this.]
+* the question of pooling and aggregation of risk^[Current project I'm working on.]
+* extreme events as "acute"?
 * can we use machine learning models in an effective way to do any of this?
-* multiple pollutants^[The Holy Grail. Really, really hard.] simultaneously
+* multiple pollutants simultaneously^[The Holy Grail. Really, really hard.]
 
-## Any Thoughts?
+## $\;$
 
 <center>
 Thank you to Meredith & Piotr for inviting me today, and for your hospitality!
