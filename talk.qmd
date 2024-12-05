@@ -35,6 +35,12 @@ smaller: false
 * do a lot of random things that are all connected through the lens of "interesting data",
 with a theme of time series and statistical signal processing
 
+<center>
+
+![Why I almost didn't make it ...](figure/snow.png){width=500}
+
+</center>
+
 ## Air Pollution?
 
 As I mentioned in the abstract for the talk, today I'd like
