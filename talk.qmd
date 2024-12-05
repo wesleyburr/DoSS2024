@@ -99,7 +99,8 @@ would impact human health at all?
 ## Growing Evidence
 
 The past two are extreme examples. Weight of evidence grew across the 20th
-century, including through increased research into the long-term impacts
+century that exposure to *atmospheric* air pollution could have similar detrimental
+effects. This was accentuated by increased research into the long-term impacts
 of tobacco smoking. 
 
 <br>
@@ -304,7 +305,7 @@ As you might have gathered from these examples, I often look at problems
 through the lens of a frequency-domain representation. So:
 
 * an *association* is a measurement of relationship between
-two time series: a predictor^[The problem of two or more pollutants is a thorny one, and a completely open problem.] and a response.
+two time series: a predictor^[The problem of two or more pollutants is a thorny one, and an  open problem.] and a response.
 * why should that association be linear?
 * obviously the lags matter
 
@@ -319,6 +320,18 @@ David Riegert (Trent & Queen's), and Hwashin H. Shin (Health Canada).
 
 * the estimation of the transfer functions has been solved - robustly, at that!
 * the interpretation is proving ... difficult^[We can come up with lots of options for measurements. So far, none of them are directly comparable to the past methods. This is annoying.]
+
+## Plot
+
+![Jackknifed Transfer Function Between NO2 and All-Cause Mortality.](figure/jackknifed_tf.png)
+
+## Plot
+
+<center>
+
+![Offset Coherence Between Z and Y for Magnetic Field](figure/offsetCoh.png){width=500}
+
+</center>
 
 # Honourable Mention
 
